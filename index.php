@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/listagem.css">
-    <title>Document</title>
+    <title>Listagem - Contatos</title>
 </head>
 <body>
     <section>
@@ -26,10 +26,10 @@
                 <th>E-MAIL 2</th>
                 <th>Cpf</th>
                 <th>AÇÕES</th>
-            <!-- <?php
+            <?php
             $lista = $contato->getAll();
             foreach($lista as $iten):
-            ?> -->
+            ?> 
             <tr>
                 <td><?php echo $iten['nome'];?></td>
                 <td><?php echo$iten['sobrenome'];?></td>

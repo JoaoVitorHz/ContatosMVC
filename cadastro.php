@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos</title>
+    <title>Cadastro - Contatos</title>
     <link rel="stylesheet" href="assets/css/cadastro.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
             <div class="right">
                 <div class="header">
                     <h1>Cadastro</h1>
-                    <button>Voltar</button>
+                    <a href="index.php">Voltar</a>
                 </div>
 
                 <div class="formulario">
@@ -63,7 +63,26 @@
             </div>
         </div>
     </section>
-
+    
     <script src="assets/js/cadastro.js"></script>
+
+    <?php
+    include 'banco.php';
+    $contato = new banco();
+
+    if (!empty($_POST['nome'])){
+        $nome = $_POST['nome'];
+        $sobrenome = $_POST['sobrenome'];
+        $telefone1 = $_POST['telefone1'];
+        $telefone2 = $_POST['telefone2'];
+        $email1 = $_POST['email1'];
+        $email2 = $_POST['email2'];
+        $cpf = $_POST['cpf'];
+
+        if($contato->cadastro($nome, $sobrenome, $telefone1, $telefone2, $email1, $email2, $cpf)){
+            header("Location: index.php");
+        }
+    }
+    ?>
 </body>
 </html>

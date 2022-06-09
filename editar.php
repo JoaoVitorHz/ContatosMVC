@@ -1,17 +1,17 @@
-<!-- <?php
+<?php
 include 'banco.php';
 $contato = new banco();
 
 $id = $_GET['id'];
 $info = $contato->getInfo($id);
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar</title>
+    <title>Editar - Contatos</title>
     <link rel="stylesheet" href="assets/css/cadastro.css">
 </head>
 <body>
@@ -24,7 +24,7 @@ $info = $contato->getInfo($id);
             <div class="right">
                 <div class="header">
                     <h1>Editar</h1>
-                    <button>Voltar</button>
+                    <a href="index.php">Voltar</a>
                 </div>
 
                 <div class="formulario">
@@ -79,7 +79,7 @@ $info = $contato->getInfo($id);
     <!-- <script src="assets/js/cadastro.js"></script> -->
 </body>
 </html>
-<!-- <?php
+<?php
 $contato = new banco();
 if(!empty($_POST['id'])){
     
@@ -97,4 +97,4 @@ if(!empty($_POST['id'])){
     header("Location:index.php");
    }
 }
-   ?> -->
+   ?>
